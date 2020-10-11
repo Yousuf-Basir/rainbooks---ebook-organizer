@@ -1,0 +1,7 @@
+{
+  "name": "RainBooks",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
