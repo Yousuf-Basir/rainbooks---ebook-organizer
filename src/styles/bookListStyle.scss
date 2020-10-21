@@ -1,0 +1,33 @@
+.bookThumbnail{
+    height: 100px;
+    width: 80px;
+}
+.bookThumbnail img{
+    object-fit: contain !important;
+}
+.bookListContent{
+    height: calc(100vh - 90px);
+}
+.addFilterDiv{
+    height: 68px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    ion-menu-button{
+        font-size: 26px;
+    }
+}
+.addFilterHead{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    .addFilterHead{
+        display: block;
+        ion-note{
+            margin-left: 16px;
+        }
+    }
+    .bookListContent{
+        height: calc(100vh - 190px);
+    }
+}

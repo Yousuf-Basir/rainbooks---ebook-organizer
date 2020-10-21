@@ -1,5 +1,5 @@
 import { IonItemOption } from '@ionic/react';
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import App from './App';
@@ -8,6 +8,8 @@ import * as serviceWorker from './serviceWorker';
 
 import { PersistGate } from 'redux-persist/integration/react';
 import store, {persistor} from './store/index';
+
+
 
 ReactDOM.render(
 <Provider store={store}>

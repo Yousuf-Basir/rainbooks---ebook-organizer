@@ -12,7 +12,7 @@ import {
 
 import React from 'react';
 import {useLocation } from 'react-router-dom';
-import { logInOutline, atCircleOutline, archiveOutline, archiveSharp, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp, home, logOut } from 'ionicons/icons';
+import { logInOutline, atCircleOutline, archiveOutline, archiveSharp, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp, home, logOut, book, shareOutline, people } from 'ionicons/icons';
 import './Menu.css';
 
 import { RootState } from '../store';
@@ -30,11 +30,11 @@ const appPages: AppPage[] = [
   {
     title: 'Inbox',
     url: '/page/Inbox',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
+    iosIcon: people,
+    mdIcon: people
   },
   {
-    title: 'Outbox',
+    title: 'Shared Books',
     url: '/page/Outbox',
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp
@@ -44,24 +44,6 @@ const appPages: AppPage[] = [
     url: '/page/Favorites',
     iosIcon: heartOutline,
     mdIcon: heartSharp
-  },
-  {
-    title: 'Archived',
-    url: '/page/Archived',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp
-  },
-  {
-    title: 'Trash',
-    url: '/page/Trash',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp
-  },
-  {
-    title: 'Spam',
-    url: '/page/Spam',
-    iosIcon: warningOutline,
-    mdIcon: warningSharp
   }
 ];
 
@@ -91,9 +73,9 @@ const Menu: React.FC = () => {
             </IonItem>
           </IonMenuToggle>
           :<IonMenuToggle autoHide={false}>
-          <IonItem className={location.pathname === "/page/dashboard" ? 'selected' : ''} routerLink="/page/dashboard" routerDirection="none" lines="none" detail={false}>
-            <IonIcon slot="start" ios={home} md={home} />
-            <IonLabel>Dashboard</IonLabel>
+          <IonItem className={location.pathname === "/page/My Books" ? 'selected' : ''} routerLink="/page/My Books" routerDirection="none" lines="none" detail={false}>
+            <IonIcon slot="start" ios={book} md={book} />
+            <IonLabel>My Books</IonLabel>
           </IonItem>
 
             {

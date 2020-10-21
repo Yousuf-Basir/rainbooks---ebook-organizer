@@ -1,3 +1,9 @@
+.split-pane-visible > ion-menu {
+  max-width: 300px!important;
+  min-width: 100px !important;
+  width: 240px;
+}
+
 ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 }
@@ -52,8 +58,10 @@ ion-menu.md ion-item.selected ion-icon {
   color: var(--ion-color-primary);
 }
 
+
+/* Unselected menu item icon color */
 ion-menu.md ion-item ion-icon {
-  color: #616e7e;
+  color: #867f75;
 }
 
 ion-menu.md ion-item ion-label {

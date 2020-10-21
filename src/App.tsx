@@ -1,6 +1,6 @@
 import Menu from './components/Menu';
 import Page from './pages/Page';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect } from 'react-router-dom';
@@ -28,12 +28,17 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import PrivateRoute from './auth/PrivateRoute';
 import ResetPassowrd from './pages/ResetPassowrd';
-
+import {customScroll} from './CustomScrollBar'
 
 const App: React.FC = () => {
+  useEffect(()=>{
+    setTimeout(()=>{
+        customScroll()
+    }, 250)
+}, [])
 
   return (
-    <IonApp>
+    <IonApp color="dark">
       <IonReactRouter>
         <IonSplitPane contentId="main">
           <Menu />
@@ -41,8 +46,8 @@ const App: React.FC = () => {
             <PublicRoute path="/signup" component={Signup} exact></PublicRoute>
             <PublicRoute path="/login" component={Login} exact></PublicRoute>
             <PublicRoute path="/resetpassword" component={ResetPassowrd} exact></PublicRoute>
-            <PrivateRoute path="/page/:name" component={Page} exact ></PrivateRoute>
-            <Redirect from="/" to="/page/dashboard" exact />
+            <PrivateRoute path="/page/:name" component={Page} ></PrivateRoute>
+            <Redirect from="/" to="/page/My Books" exact />
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>

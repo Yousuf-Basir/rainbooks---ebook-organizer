@@ -2,11 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Ionic App</title>
+    <title>Rain Books</title>
 
     <base href="/" />
 
     <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#383838" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#383838">
     <meta
       name="viewport"
       content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -17,14 +19,16 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <link rel="shortcut icon" type="image/png" href="%PUBLIC_URL%/assets/icon/favicon.png" />
-
+    <!-- add to homescreen for android -->
+    <meta name="mobile-web-app-capable" content="yes">
     <!-- add to homescreen for ios -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Ionic App" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
   </head>
 
-  <body>
+  <body class="body">
     <div id="root"></div>
   </body>
 
